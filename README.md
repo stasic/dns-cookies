@@ -12,4 +12,8 @@ Or disable cookies with following config:
   answer-cookie no;
 ```
 
+ISC addressed this issue in their knowledge base:
 https://kb.isc.org/docs/dns-cookies-on-servers-in-anycast-clusters
+
+BIND 9.14.10 ARM (Administrator Reference Manual):
+https://downloads.isc.org/isc/bind9/9.14.10/doc/arm/Bv9ARM.ch05.html#boolean_options
