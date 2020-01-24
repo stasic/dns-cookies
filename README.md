@@ -1,7 +1,7 @@
 # dns-cookies
 Checking DNS ANYCAST instances (BIND) for synchronized DNS Cookies
 
-With BIND 9.11 and newer DNS Cookies are enabled *automatically*. 
+With BIND 9.11 and newer DNS Cookies are enabled **automatically**. 
 Either synchronize them with following config (siphash24 is available in BIND 9.14.5):
 ```
   cookie-algorithm siphash24;
