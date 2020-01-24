@@ -5,7 +5,7 @@ With BIND 9.11 and newer DNS Cookies are enabled **automatically**.
 Either synchronize them with following config (siphash24 is available in BIND 9.14.5):
 ```
   cookie-algorithm siphash24;
-  cookie-secret string;
+  cookie-secret "shared-secret-string";
 ```
 Or disable cookies with following config:
 ```
