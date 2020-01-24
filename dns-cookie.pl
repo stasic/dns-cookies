@@ -63,7 +63,7 @@ sub help
   print <<EOT;
 Usage: $0 --nsip <mgmt-ip1> --nsip <mgmt-ip2>
  For less verbose output use someting like:
- $0 --nsip 10.10.10.1 --nsip 192.168.0.1 | grep COOKIE
+ $0 --nsip 10.10.10.1 --nsip my-anycast1 | grep COOKIE
  
  Required argumet:
   --nsip      mgmt-ip of nameserver to test
@@ -80,8 +80,9 @@ Usage: $0 --nsip <mgmt-ip1> --nsip <mgmt-ip2>
   
 # Test your anycast-nameservers (BIND) if they all return the same DNS Cookie.
 #
-# With BIND 9.11 and newer DNS Cookies are enabled automatically. 
-# Either synchronize them with following config (siphash24 comes with BIND 9.14.5):
+# With BIND 9.11 and newer DNS Cookies are enabled **automatically**.
+# Either synchronize them with following config (siphash24 is available since BIND 9.14.5):
+# dns-operations@lists.dns-oarc.net
 #   cookie-algorithm siphash24;
 #   cookie-secret "shared-secret-string";
 # Or disable cookies with following config:
